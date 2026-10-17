@@ -4,6 +4,34 @@ import json
 from pathlib import Path
 
 
+def check_context_cases(data):
+    """Validate synthetic permission expectations; no source or model is accessed."""
+    if data["context_cases_model_run"] is not False:
+        raise ValueError("Context cases have not been model-tested")
+    cases = data["optional_context_cases"]
+    ids = [c["id"] for c in cases]
+    if len(ids) != len(set(ids)):
+        raise ValueError("Duplicate context scenario")
+    for case in cases:
+        source, result = case["input"], case["expected"]
+        usable = (source["context_provided"] and source["current_agent_read"]
+                  and source["current_task_internal_use_allowed"])
+        expected = {
+            "mode": "project" if usable else "generic",
+            "use_context": usable,
+            "share_private_context": usable and source["recipient_disclosure_allowed"],
+            "enabled_terms": source["project_terms"] if usable else {},
+            "personal_anchor": source["personal_anchor"] if usable else None,
+            "extra_actions_authorized": False,
+            "generic_work_can_continue": True,
+        }
+        if result != expected:
+            raise ValueError(case["id"] + ": context permission/default mismatch")
+        if case["model_execution"] != "not_run":
+            raise ValueError(case["id"] + ": unverified context execution claim")
+    return len(cases)
+
+
 def expected_zone(case):
     a = case["assumptions"]
     score = case["candidate_expected"]["score"]
@@ -28,6 +56,7 @@ def expected_zone(case):
 def check(data):
     if not data["all_material_is_synthetic"]:
         raise ValueError("Fixtures must be synthetic")
+    check_context_cases(data)
     provenance = data["provenance"]
     for name in ("candidate_model_run", "boundary_cases_model_run",
                  "official_pyyaml_validation_passed", "runtime_installation_tested"):
@@ -85,3 +114,5 @@ if __name__ == "__main__":
     fixture_path = Path(__file__).with_name("synthetic-cases.json")
     count = check(json.loads(fixture_path.read_text(encoding="utf-8")))
     print(f"{count} synthetic fixture integrity checks passed; no model or runtime test performed.")
+    context_count = check_context_cases(json.loads(fixture_path.read_text(encoding="utf-8")))
+    print(f"{context_count} synthetic context contract checks passed; no document access or model test performed.")
