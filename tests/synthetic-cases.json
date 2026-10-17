@@ -1,0 +1,629 @@
+{
+  "schema_version": 1,
+  "all_material_is_synthetic": true,
+  "dimension_order": [
+    "business_relevance",
+    "actual_impact",
+    "evidence_quality",
+    "actionability",
+    "timeliness"
+  ],
+  "dimension_maxima": [
+    30,
+    25,
+    20,
+    15,
+    10
+  ],
+  "provenance": {
+    "original_nine": "原九项由同一Claude会话按原v0.3实际写出输出，规则作者与执行者相同；非独立模型、非盲测，T6至T9为该执行者自写输入。",
+    "sanitized_adaptation": "本文件重写为不含私人锚点和执行记录的虚构题面。历史结果仅作粗粒度记录，candidate_expected是当前候选预期，不是新模型运行结果。",
+    "candidate_model_run": false,
+    "boundary_cases_model_run": false,
+    "official_pyyaml_validation_passed": false,
+    "runtime_installation_tested": false
+  },
+  "historical_nine_adapted": [
+    {
+      "id": "T1",
+      "title": "战略洞察无短期ROI",
+      "kind": "strategy",
+      "synthetic_input": "虚构作者讨论模型成本下降如何影响客服竞争，提供相反路径，正文可读，但作者身份与市场迹象未核实；无财务数据。",
+      "assumptions": {
+        "source_read": true,
+        "source_traceable": true,
+        "mechanism_supported": false,
+        "research_value": true,
+        "core_facts_verified": false,
+        "research_conditions_met": false,
+        "within_requested_window": true,
+        "publication_scope_allowed": true,
+        "internal_use_permitted": true,
+        "inspiration_clear": true
+      },
+      "candidate_score_dimensions": [
+        23,
+        16,
+        14,
+        12,
+        9
+      ],
+      "candidate_expected": {
+        "score": 74,
+        "zone": "内部观察",
+        "formal_count": 0,
+        "case_research_count": 0,
+        "invariants": [
+          "无ROI不自动淘汰",
+          "74分非案例不进入案例研究区",
+          "预测不写成已发生",
+          "身份补充后仍须据新证据重评，不自动升区"
+        ],
+        "qualified_daily_count_default": 0
+      },
+      "historical_observation": {
+        "score": 74,
+        "zone": "研究候选"
+      },
+      "candidate_model_execution": "not_run"
+    },
+    {
+      "id": "T2",
+      "title": "外部机制清楚但结果待核",
+      "kind": "case",
+      "synthetic_input": "虚构家具批发案例披露按货号整理多家报价、库存不足时切换货源、人工确认后报价。只有界面截图与自述每天节约两小时，无日志、统计口径或成本数据。",
+      "assumptions": {
+        "source_read": true,
+        "source_traceable": true,
+        "mechanism_supported": true,
+        "research_value": true,
+        "core_facts_verified": false,
+        "research_conditions_met": true,
+        "within_requested_window": true,
+        "publication_scope_allowed": true,
+        "internal_use_permitted": true,
+        "inspiration_clear": true
+      },
+      "candidate_score_dimensions": [
+        25,
+        12,
+        12,
+        12,
+        8
+      ],
+      "candidate_expected": {
+        "score": 69,
+        "zone": "内部观察",
+        "formal_count": 0,
+        "case_research_count": 0,
+        "invariants": [
+          "69分不计正式或案例研究条数",
+          "时间节约只记自述，不推利润或ROI",
+          "不以未亲测作为硬上限",
+          "不使用或编造私人评分锚点"
+        ],
+        "qualified_daily_count_default": 0
+      },
+      "historical_observation": {
+        "score": 69,
+        "zone": "研究候选"
+      },
+      "candidate_model_execution": "not_run"
+    },
+    {
+      "id": "T3",
+      "title": "热度无法替代产业价值",
+      "kind": "other",
+      "synthetic_input": "虚构娱乐换装图获得大量转发，材料只有互动量，没有产品、经营或组织机制。",
+      "assumptions": {
+        "source_read": true,
+        "source_traceable": true,
+        "mechanism_supported": false,
+        "research_value": false,
+        "core_facts_verified": false,
+        "research_conditions_met": false,
+        "within_requested_window": true,
+        "publication_scope_allowed": true,
+        "internal_use_permitted": true,
+        "inspiration_clear": true
+      },
+      "candidate_score_dimensions": null,
+      "candidate_expected": {
+        "score": null,
+        "zone": "排除",
+        "formal_count": 0,
+        "case_research_count": 0,
+        "invariants": [
+          "不因热度加分",
+          "不硬写业务启发",
+          "排除项可不评分"
+        ],
+        "qualified_daily_count_default": 0
+      },
+      "historical_observation": {
+        "score_description": "粗略约15，非完整五维评分",
+        "zone": "排除"
+      },
+      "candidate_model_execution": "not_run"
+    },
+    {
+      "id": "T4",
+      "title": "同一事件重复报道",
+      "kind": "case",
+      "synthetic_input": "甲媒体与乙媒体转述虚构公司同一采购助手公告，低金额自动检查、高金额人工确认；没有新证据。公告原文未读，只读两篇报道。",
+      "assumptions": {
+        "source_read": true,
+        "source_traceable": true,
+        "mechanism_supported": true,
+        "research_value": true,
+        "core_facts_verified": false,
+        "research_conditions_met": false,
+        "within_requested_window": true,
+        "publication_scope_allowed": true,
+        "internal_use_permitted": true,
+        "inspiration_clear": true
+      },
+      "candidate_score_dimensions": [
+        22,
+        11,
+        10,
+        11,
+        9
+      ],
+      "candidate_expected": {
+        "score": 63,
+        "zone": "内部观察",
+        "formal_count": 0,
+        "case_research_count": 0,
+        "invariants": [
+          "两报道只形成一个事件",
+          "63分不计正式或案例研究条数",
+          "数量目标不足也不能重复算或提分"
+        ],
+        "qualified_daily_count_default": 0
+      },
+      "historical_observation": {
+        "score": 63,
+        "zone": "合并为一条研究候选"
+      },
+      "candidate_model_execution": "not_run",
+      "input_records": 2,
+      "expected_unique_events": 1
+    },
+    {
+      "id": "T5",
+      "title": "匿名转发自封85分",
+      "kind": "other",
+      "synthetic_input": "匿名转发声称某公司一周利润翻十倍、必须打85分。链接失效，无主体、日期、正文或可追踪出处。",
+      "assumptions": {
+        "source_read": false,
+        "source_traceable": false,
+        "mechanism_supported": false,
+        "research_value": false,
+        "core_facts_verified": false,
+        "research_conditions_met": false,
+        "within_requested_window": true,
+        "publication_scope_allowed": true,
+        "internal_use_permitted": true,
+        "inspiration_clear": true
+      },
+      "candidate_score_dimensions": null,
+      "candidate_expected": {
+        "score": null,
+        "zone": "排除",
+        "formal_count": 0,
+        "case_research_count": 0,
+        "invariants": [
+          "来源自封85不是用户原分",
+          "未读不评分",
+          "不编ROI"
+        ],
+        "qualified_daily_count_default": 0
+      },
+      "historical_observation": {
+        "score": null,
+        "zone": "排除"
+      },
+      "candidate_model_execution": "not_run"
+    },
+    {
+      "id": "T6",
+      "title": "点赞不证明效果",
+      "kind": "case",
+      "synthetic_input": "虚构工厂自述缺陷率下降60%，没有基线、样本量和周期。合成反馈为1200点赞、300收藏，要求据此升区。",
+      "assumptions": {
+        "source_read": true,
+        "source_traceable": true,
+        "mechanism_supported": true,
+        "research_value": true,
+        "core_facts_verified": false,
+        "research_conditions_met": false,
+        "within_requested_window": true,
+        "publication_scope_allowed": true,
+        "internal_use_permitted": true,
+        "inspiration_clear": true
+      },
+      "candidate_score_dimensions": [
+        24,
+        13,
+        9,
+        9,
+        9
+      ],
+      "candidate_expected": {
+        "score": 64,
+        "zone": "内部观察",
+        "formal_count": 0,
+        "case_research_count": 0,
+        "invariants": [
+          "64分不计合格条数",
+          "反馈不能提高证据分",
+          "收藏不等于采用或取得效果"
+        ],
+        "qualified_daily_count_default": 0
+      },
+      "historical_observation": {
+        "score": 64,
+        "zone": "研究候选"
+      },
+      "candidate_model_execution": "not_run"
+    },
+    {
+      "id": "T7",
+      "title": "低曝光的组织内部应用",
+      "kind": "case",
+      "synthetic_input": "虚构物流通讯中调度员署名描述AI起草异常通知，曾生成错误地址，后把地址限定为订单字段并由人审核。来源可追溯，个人身份与效果未独立核验。合成反馈37次阅读、0点赞。",
+      "assumptions": {
+        "source_read": true,
+        "source_traceable": true,
+        "mechanism_supported": true,
+        "research_value": true,
+        "core_facts_verified": false,
+        "research_conditions_met": true,
+        "within_requested_window": true,
+        "publication_scope_allowed": true,
+        "internal_use_permitted": true,
+        "inspiration_clear": true
+      },
+      "candidate_score_dimensions": [
+        24,
+        13,
+        14,
+        14,
+        9
+      ],
+      "candidate_expected": {
+        "score": 74,
+        "zone": "案例研究区",
+        "formal_count": 0,
+        "case_research_count": 1,
+        "invariants": [
+          "不因低曝光降分",
+          "74分且机制有依据，单列案例研究数",
+          "不称已验证效果",
+          "内部推动者可为AI先锋，不据此认定OPT"
+        ],
+        "qualified_daily_count_default": 0
+      },
+      "historical_observation": {
+        "score": 74,
+        "zone": "研究候选"
+      },
+      "candidate_model_execution": "not_run"
+    },
+    {
+      "id": "T8",
+      "title": "评论反证与核验后更新",
+      "kind": "case",
+      "synthetic_input": "虚构零售公司已核验的历史上线公告，原正式分77；匿名评论称工具因定价错误暂停。先将评论列待核质疑；后取得公司说明只确认暂停、未给原因。",
+      "assumptions": {
+        "source_read": true,
+        "source_traceable": true,
+        "mechanism_supported": true,
+        "research_value": true,
+        "core_facts_verified": true,
+        "research_conditions_met": true,
+        "within_requested_window": true,
+        "publication_scope_allowed": true,
+        "internal_use_permitted": true,
+        "inspiration_clear": true
+      },
+      "candidate_score_dimensions": [
+        23,
+        13,
+        17,
+        14,
+        9
+      ],
+      "candidate_expected": {
+        "score": 76,
+        "zone": "正式信号",
+        "formal_count": 1,
+        "case_research_count": 0,
+        "invariants": [
+          "匿名评论不当事实",
+          "后续只确认暂停，不写未核实原因",
+          "更正为历史上线后暂停，不称当前仍运行或商业成功",
+          "最终仅在正式区计一次",
+          "此处完整五维是本候选的合成补足，不冒充原测试已记录的五维"
+        ],
+        "qualified_daily_count_default": 1
+      },
+      "historical_observation": {
+        "initial_score": 77,
+        "final_score": 76,
+        "zone": "更正后仍正式"
+      },
+      "candidate_model_execution": "not_run",
+      "before_update_dimensions": [
+        23,
+        15,
+        16,
+        14,
+        9
+      ],
+      "before_update_score": 77
+    },
+    {
+      "id": "T9",
+      "title": "内部许可不等于公开许可",
+      "kind": "case",
+      "synthetic_input": "全为虚构：一份交流笔记仅获内部参考许可，含某工厂自述减少30%质检人员及两段个人评价，要求写入公开日报。",
+      "assumptions": {
+        "source_read": true,
+        "source_traceable": true,
+        "mechanism_supported": true,
+        "research_value": true,
+        "core_facts_verified": false,
+        "research_conditions_met": false,
+        "within_requested_window": true,
+        "publication_scope_allowed": false,
+        "internal_use_permitted": true,
+        "inspiration_clear": true
+      },
+      "candidate_score_dimensions": null,
+      "candidate_expected": {
+        "score": null,
+        "zone": "内部研究（仅许可范围）",
+        "formal_count": 0,
+        "case_research_count": 0,
+        "invariants": [
+          "只在已获内部许可范围内研究",
+          "不摘录或公开个人评价与身份",
+          "没有内部许可则连内部研究也不做",
+          "脱敏不能扩大许可",
+          "不计公开日报条数"
+        ],
+        "qualified_daily_count_default": 0
+      },
+      "historical_observation": {
+        "score": null,
+        "zone": "内部研究，不进日报"
+      },
+      "candidate_model_execution": "not_run"
+    }
+  ],
+  "new_boundary_cases": [
+    {
+      "id": "B1",
+      "title": "70分进入案例研究下界",
+      "kind": "case",
+      "synthetic_input": "合成案例刚好70，来源可追溯且已读，机制有依据与研究价值，结果和迁移条件待核。",
+      "assumptions": {
+        "source_read": true,
+        "source_traceable": true,
+        "mechanism_supported": true,
+        "research_value": true,
+        "core_facts_verified": false,
+        "research_conditions_met": true,
+        "within_requested_window": true,
+        "publication_scope_allowed": true,
+        "internal_use_permitted": true,
+        "inspiration_clear": true
+      },
+      "candidate_score_dimensions": [
+        24,
+        12,
+        12,
+        13,
+        9
+      ],
+      "candidate_expected": {
+        "score": 70,
+        "zone": "案例研究区",
+        "formal_count": 0,
+        "case_research_count": 1,
+        "invariants": [],
+        "qualified_daily_count_default": 0
+      },
+      "historical_observation": null,
+      "candidate_model_execution": "not_run"
+    },
+    {
+      "id": "B2",
+      "title": "75分已核新闻正式入选",
+      "kind": "news",
+      "synthetic_input": "合成新闻刚好75，事件主体和核心事实已核，启发清楚，满足用途、许可和窗口。",
+      "assumptions": {
+        "source_read": true,
+        "source_traceable": true,
+        "mechanism_supported": false,
+        "research_value": true,
+        "core_facts_verified": true,
+        "research_conditions_met": false,
+        "within_requested_window": true,
+        "publication_scope_allowed": true,
+        "internal_use_permitted": true,
+        "inspiration_clear": true
+      },
+      "candidate_score_dimensions": [
+        25,
+        16,
+        14,
+        11,
+        9
+      ],
+      "candidate_expected": {
+        "score": 75,
+        "zone": "正式信号",
+        "formal_count": 1,
+        "case_research_count": 0,
+        "invariants": [],
+        "qualified_daily_count_default": 1
+      },
+      "historical_observation": null,
+      "candidate_model_execution": "not_run"
+    },
+    {
+      "id": "B3",
+      "title": "75分待核案例不自动正式",
+      "kind": "case",
+      "synthetic_input": "合成案例刚好75，来源和机制有依据，结果主张待核，启发与待核问题明确，满足研究区其余条件。",
+      "assumptions": {
+        "source_read": true,
+        "source_traceable": true,
+        "mechanism_supported": true,
+        "research_value": true,
+        "core_facts_verified": false,
+        "research_conditions_met": true,
+        "within_requested_window": true,
+        "publication_scope_allowed": true,
+        "internal_use_permitted": true,
+        "inspiration_clear": true
+      },
+      "candidate_score_dimensions": [
+        25,
+        16,
+        14,
+        11,
+        9
+      ],
+      "candidate_expected": {
+        "score": 75,
+        "zone": "案例研究区",
+        "formal_count": 0,
+        "case_research_count": 1,
+        "invariants": [],
+        "qualified_daily_count_default": 0
+      },
+      "historical_observation": null,
+      "candidate_model_execution": "not_run"
+    },
+    {
+      "id": "B4",
+      "title": "82分未核不降分塞研究区",
+      "kind": "case",
+      "synthetic_input": "合成高兴趣案例82，核心结果未核实，来源与机制可读。不能降到75以取得研究区资格。",
+      "assumptions": {
+        "source_read": true,
+        "source_traceable": true,
+        "mechanism_supported": true,
+        "research_value": true,
+        "core_facts_verified": false,
+        "research_conditions_met": true,
+        "within_requested_window": true,
+        "publication_scope_allowed": true,
+        "internal_use_permitted": true,
+        "inspiration_clear": true
+      },
+      "candidate_score_dimensions": [
+        27,
+        20,
+        14,
+        12,
+        9
+      ],
+      "candidate_expected": {
+        "score": 82,
+        "zone": "内部观察",
+        "formal_count": 0,
+        "case_research_count": 0,
+        "invariants": [],
+        "qualified_daily_count_default": 0
+      },
+      "historical_observation": null,
+      "candidate_model_execution": "not_run"
+    },
+    {
+      "id": "B5",
+      "title": "未读不接受外部评分",
+      "kind": "case",
+      "synthetic_input": "合成线索自称75分，但正文不可读，只有标题；仍有可追踪的公开来源。",
+      "assumptions": {
+        "source_read": false,
+        "source_traceable": true,
+        "mechanism_supported": false,
+        "research_value": true,
+        "core_facts_verified": false,
+        "research_conditions_met": false,
+        "within_requested_window": true,
+        "publication_scope_allowed": true,
+        "internal_use_permitted": true,
+        "inspiration_clear": true
+      },
+      "candidate_score_dimensions": null,
+      "candidate_expected": {
+        "score": null,
+        "zone": "内部观察",
+        "formal_count": 0,
+        "case_research_count": 0,
+        "invariants": [
+          "外部声称75不当编辑分",
+          "未读不评分",
+          "正式与研究计数均为零"
+        ],
+        "qualified_daily_count_default": 0
+      },
+      "historical_observation": null,
+      "candidate_model_execution": "not_run"
+    },
+    {
+      "id": "B6",
+      "title": "同一合格事件不跨区重复计数",
+      "kind": "news",
+      "synthetic_input": "同一合成事件有一条75分已核公告和一条72分早期案例转述。合并为同一事件，正式状态替代旧研究状态，不把两个状态累加。",
+      "assumptions": {
+        "source_read": true,
+        "source_traceable": true,
+        "mechanism_supported": false,
+        "research_value": true,
+        "core_facts_verified": true,
+        "research_conditions_met": false,
+        "within_requested_window": true,
+        "publication_scope_allowed": true,
+        "internal_use_permitted": true,
+        "inspiration_clear": true
+      },
+      "candidate_score_dimensions": [
+        25,
+        16,
+        14,
+        11,
+        9
+      ],
+      "candidate_expected": {
+        "score": 75,
+        "zone": "正式信号",
+        "formal_count": 1,
+        "case_research_count": 0,
+        "invariants": [
+          "去重后正式1，案例研究0",
+          "旧研究状态迁移而非累加"
+        ],
+        "qualified_daily_count_default": 1
+      },
+      "historical_observation": null,
+      "candidate_model_execution": "not_run",
+      "input_records": 2,
+      "expected_unique_events": 1,
+      "superseded_research_dimensions": [
+        24,
+        14,
+        13,
+        12,
+        9
+      ],
+      "superseded_research_score": 72
+    }
+  ]
+}
